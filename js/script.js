@@ -42,14 +42,11 @@
 
 
 let cardDeck = document.querySelectorAll(".card-deck");
-console.log(cardDeck);
-
-let myCard = document.querySelectorAll(".card-deck .card");
-console.log(myCard);
+let myCard = cardDeck[0].children[1];
 let button = myCard.querySelector("button");
 button.classList.replace("btn-primary", "btn-success");
 button.addEventListener("click", function(){
-    button.parentElement.parentElement.classList.toggle("color");
+    button.parentElement.parentElement.classList.toggle("color")
 });
 
 console.log(button);
